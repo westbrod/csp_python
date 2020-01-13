@@ -1,5 +1,8 @@
 import tkinter as tk 
 
+def callback():
+    print ("button pressed")
+
 root = tk.Tk()
 root.geometry("400x300")
 
@@ -16,15 +19,9 @@ user_label.pack()
 
 Pass_text =tk.Entry(root)
 Pass_text.pack()
-Pass_submit = Pass_text.get()
+Pass_text = tk.Entry(root, show='*')
 
-def callback():
-    print ("click!")
-
-b = button(master, text="Submit", command=callback)
-b.pack()
-
-
-
+Pass_submit = tk.Button(root, text= 'submit', command= callback)
+Pass_submit.pack()
 
 root.mainloop()
