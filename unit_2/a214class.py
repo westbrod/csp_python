@@ -4,6 +4,7 @@ def callback():
     print ("User:", user_entry.get())
     print ("Pass:", Pass_text.get())
 
+
 root = tk.Tk()
 root.geometry("400x300")
 
@@ -22,6 +23,18 @@ Pass_text.pack()
 Pass_submit = tk.Button(root, text= 'submit', command= callback)
 Pass_submit.pack()
 
-# if input(Pass_text) 
+
+
+def pass_check():
+    if len(Pass_text.get()) <= 8:
+        print("Good")
+    else:
+        print("Please enter a password longer than 8 characters")
+
+
+signup_submit = tk.Button(root, text= 'sighup', command= pass_check)
+signup_submit.pack()
+
+
 
 root.mainloop()
