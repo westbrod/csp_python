@@ -1,4 +1,5 @@
 import tkinter as tk 
+import string
 
 def callback():
     print ("User:", user_entry.get())
@@ -29,11 +30,36 @@ def pass_check():
     if len(Pass_text.get()) <= 8:
         print("Good")
     else:
-        print("Please enter a password longer than 8 characters")
+        print("Please enter a password longer than 8 characters. ")
+
+def special_check():
+    if (Pass_test.get()) == Special:
+        print(Good)
+    else:
+        print("please enter at least one special character.")
 
 
-signup_submit = tk.Button(root, text= 'sighup', command= pass_check)
+
+def submit_sign_up():
+    password = password_entry.get()
+
+
+
+def is_valid_password(password):
+    if len(password) < 8:
+
+
+
+    
+
+
+
+
+
+signup_submit = tk.Button(root, text= 'sighup', command= pass_check )
 signup_submit.pack()
+
+
 
 
 
