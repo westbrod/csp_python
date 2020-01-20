@@ -9,16 +9,6 @@ def callback():
     print ("Pass:", Pass_text.get())
 
 
-def submit_sign_up():
-    namelater = Pass_text.get()
-    
-    if is_valid_password(namelater):
-        result_label.config(text= 'valid sign up ')
-    else:
-        result_label.config(text= 'Not a valid sign up') 
-    
-    users [user_entry.get] = pass_text.get 
-    
 
 
 
@@ -72,9 +62,19 @@ Pass_text = tk.Entry(root, show='')
 Pass_text.pack()
 
 
-Login= tk.Button(root, text= 'Login', command= submit_sign_up)
+Login= tk.Button(root, text= 'Login', command= callback)
 Login.pack()
 
+def submit_sign_up():
+    namelater = Pass_text.get()
+    
+    if is_valid_password(namelater):
+        result_label.config(text= 'valid sign up ')
+    else:
+        result_label.config(text= 'Not a valid sign up') 
+    
+    users.append[user_entry.get()] = pass_text.get()
+    
 
 
 signup_submit = tk.Button(root, text= 'sighup', command= submit_sign_up)
