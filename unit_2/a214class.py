@@ -19,15 +19,14 @@ def callback():
 
 
 def submit_sign_up():
-    namelater = Pass_text.get()
-    hash = pbkdf2_sha256.hash(Pass_text.get())   
+    hash_pass = pbkdf2_sha256.hash(Pass_text.get())   
 
     if user_entry.get() in users:
         result_label.config(text='username is already in use.')
 
     else: 
-        user1 = users[user_entry.get()] = hash
-        if is_valid_password(namelater):
+        user1 = users[user_entry.get()] = hash_pass
+        if is_valid_password(Pass_text.get()):
             result_label.config(text= 'valid sign up ')
         else:
             result_label.config(text= 'Not a valid sign up')
