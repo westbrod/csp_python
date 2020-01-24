@@ -31,7 +31,7 @@ def submit_sign_up():
         else:
             result_label.config(text= 'Not a valid sign up')
 
-
+dflkjrw
 def is_valid_password(password):
     if len(password) < 8:
         return False 
