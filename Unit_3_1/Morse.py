@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-path = 'raw_data_311.csv'
+path = 'MORSE.csv'
 
 # data_selection = input("which data would you like to see: 1) Time(s), 2) Temperature 1(°C), or 3) Temperature 1(°C)?")
 
@@ -17,7 +17,7 @@ with open(path) as f:
 for line in data[1:]:
     vals = line.split(',')
 
-    time_list += [int(vals[0])]
+    time_list += [vals[0]]
     temp1_list += [float(vals[1])]
     temp2_list += [float(vals[2])]
    
@@ -25,20 +25,6 @@ for line in data[1:]:
 
 
 print(everything)
-
-#these are the outputs to the inputs 
-
-# if data_selection == ("1"):
-#    print(time_list)
-# elif data_selection == ("2"):
-#     print(temp1_list)
-# elif data_selection == ("3"):
-#     print(temp2_list)
-# else:
-#     pass
-
-
-
 
 
 plt.plot(time_list, temp1_list, color='b' )
