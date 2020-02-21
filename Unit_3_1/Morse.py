@@ -11,12 +11,14 @@ temp2_list = []
 
 
 with open(path) as f:
-    data = f.read().split('\n')
+    data = f.read().strip().split('\n')
 
 # for each line in the data, print the 
 for line in data[1:]:
+    print(line)
+    
     vals = line.split(',')
-
+    print(vals)
     time_list += [vals[0]]
     temp1_list += [float(vals[1])]
     temp2_list += [float(vals[2])]
@@ -24,18 +26,16 @@ for line in data[1:]:
     everything = [time_list, temp1_list, temp2_list]
 
 
-print(everything)
-
-
 plt.plot(time_list, temp1_list, color='b' )
 plt.plot(time_list, temp2_list, color= 'r')
-plt.title("Time Vs Temperature")
+
+plt.title("Time Vs Sound level")
 plt.xlabel('time (in Seconds)')
-plt.ylabel('Temperature (in celsius) ')
+plt.ylabel('Sound level (in db)')
 plt.grid('on')
-plt.legend((['Ice Water', 'Unknown Substance ']))
+plt.legend((['Sound level A-weighted(dB)', 'Sound level C-weighted(dB)']))
 plt.grid 
 
-
-
 plt.show()
+
+
