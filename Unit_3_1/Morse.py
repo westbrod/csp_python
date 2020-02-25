@@ -19,7 +19,7 @@ for line in data[1:]:
     
     vals = line.split(',')
     print(vals)
-    time_list += [vals[0]]
+    time_list += [float(vals[0])]
     temp1_list += [float(vals[1])]
     temp2_list += [float(vals[2])]
    
