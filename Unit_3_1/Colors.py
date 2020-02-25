@@ -15,7 +15,8 @@ with open(path) as f:
 
 # for each line in the data after the first line:
 for line in data[1:]:
-    #print that line    
+    '''print that line'''
+        
     # print(line)
     
     vals = line.split(',')
