@@ -1,11 +1,13 @@
 from tkinter import *
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg  
-import gdx, matplotlib.pyplot as plt, numpy as np
+import gdx, matplotlib.pyplot as plt, numpy as np, pygatt as pg
 
 
 gdx = gdx.gdx()
-gdx.open_usb()
-gdx.select_sensors(sensors=[5,6,7])
+pygatt= pg.pygatt()
+gdx.open_ble()
+pg.connect()
+gdx.select_sensors()
 root = Tk()
 
 
